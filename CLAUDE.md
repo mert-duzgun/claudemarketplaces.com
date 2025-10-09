@@ -100,6 +100,98 @@ public/               # Static assets (SVG icons, etc.)
 - **Tailwind CSS**: 4.x (with @tailwindcss/postcss plugin)
 - **Build Tool**: Turbopack (via --turbopack flag)
 
+## UI Components & Design System
+
+### shadcn/ui Guidelines
+
+This project uses **shadcn/ui** for building UI components. Follow these practices:
+
+#### Component Architecture
+- Components live in `components/ui/` directory
+- Components are copied into the project (not npm packages) for full customization
+- Each component is built with Tailwind CSS and Radix UI primitives
+- TypeScript types are included with each component
+
+#### Adding Components
+```bash
+bunx shadcn@latest add <component-name>
+```
+
+Common components:
+- **Primitives**: `button`, `input`, `label`, `select`, `checkbox`, `radio-group`
+- **Forms**: `form` (with react-hook-form + zod validation)
+- **Data Display**: `table`, `card`, `badge`, `avatar`, `separator`
+- **Overlays**: `dialog`, `sheet`, `popover`, `dropdown-menu`, `tooltip`
+- **Feedback**: `toast`, `alert`, `alert-dialog`
+
+#### Form Handling
+Use the shadcn/ui form pattern with **react-hook-form** and **zod**:
+
+```tsx
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import * as z from "zod"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+
+const formSchema = z.object({
+  username: z.string().min(2).max(50),
+})
+
+function MyForm() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: { username: "" },
+  })
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    // Handle form submission
+  }
+
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(onSubmit)}>
+        <FormField
+          control={form.control}
+          name="username"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Username</FormLabel>
+              <FormControl>
+                <Input {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </form>
+    </Form>
+  )
+}
+```
+
+#### Table & Data Display
+Use shadcn/ui `table` component with **TanStack Table** for advanced features:
+
+```bash
+bunx shadcn@latest add table
+```
+
+For data tables with sorting, filtering, and pagination:
+```bash
+bunx shadcn@latest add data-table
+```
+
+#### Styling Conventions
+- Use Tailwind utility classes for component styling
+- Leverage CSS variables for theming (defined in `globals.css`)
+- Use `cn()` utility from `lib/utils.ts` for conditional classes
+- Follow shadcn/ui's responsive design patterns
+
+#### Accessibility
+- All shadcn/ui components are built on Radix UI primitives with accessibility baked in
+- Includes proper ARIA attributes, keyboard navigation, and focus management
+- Always test with keyboard navigation and screen readers
+
 ## ESLint Configuration
 
 The project uses flat config format (`eslint.config.mjs`) with:
