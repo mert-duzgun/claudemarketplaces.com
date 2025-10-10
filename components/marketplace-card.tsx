@@ -1,6 +1,12 @@
 "use client";
 
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Marketplace } from "@/lib/types";
 import { Package, ExternalLink, Copy, Check } from "lucide-react";
@@ -32,10 +38,10 @@ export function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
     >
       <Card className="h-full transition-all hover:shadow-lg hover:border-primary/50 cursor-pointer">
         <CardHeader>
-          <div className="flex items-start justify-between gap-2">
-            <div className="flex items-center gap-2">
-              <CardTitle className="text-xl font-serif">{marketplace.repo}</CardTitle>
-            </div>
+          <div className="flex items-center justify-between gap-2">
+            <CardTitle className="text-xl font-serif line-clamp-2 flex-1 min-w-0">
+              {marketplace.repo}
+            </CardTitle>
             <div className="flex items-center gap-2 shrink-0">
               <div className="flex items-center gap-1 text-muted-foreground">
                 <Package className="h-4 w-4" />
@@ -44,7 +50,7 @@ export function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
               <ExternalLink className="h-4 w-4 text-muted-foreground" />
             </div>
           </div>
-          <CardDescription className="line-clamp-2">
+          <CardDescription className="line-clamp-3">
             {marketplace.description}
           </CardDescription>
         </CardHeader>
@@ -53,7 +59,11 @@ export function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
             {marketplace.categories && marketplace.categories.length > 0 && (
               <div className="flex flex-wrap gap-1">
                 {marketplace.categories.slice(0, 4).map((category) => (
-                  <Badge key={category} variant="secondary" className="text-xs capitalize">
+                  <Badge
+                    key={category}
+                    variant="secondary"
+                    className="text-xs capitalize"
+                  >
                     {category}
                   </Badge>
                 ))}
@@ -62,7 +72,7 @@ export function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
 
             <div className="mt-2 pt-3 border-t border-border">
               <div className="flex items-center gap-2">
-                <code className="text-xs bg-muted px-2 py-1 rounded flex-1 break-all">
+                <code className="text-xs bg-muted px-2 py-1 rounded flex-1 truncate min-w-0">
                   {installCommand}
                 </code>
                 <button
