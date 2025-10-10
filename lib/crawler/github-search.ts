@@ -20,7 +20,7 @@ export interface GitHubSearchResult {
 
 /**
  * Search GitHub for .claude-plugin/marketplace.json files
- * Uses GitHub Code Search API
+ * Uses GitHub Code Search API with pagination to get all results
  */
 export async function searchMarketplaceFiles(): Promise<GitHubSearchResult[]> {
   try {
@@ -28,27 +28,64 @@ export async function searchMarketplaceFiles(): Promise<GitHubSearchResult[]> {
 
     // Search for marketplace.json files in the .claude-plugin directory
     const query = "filename:marketplace.json path:.claude-plugin";
+    const perPage = 100; // Max results per page
+    const maxPages = 10; // GitHub API limit: max 1000 results (10 pages × 100)
 
-    const response = await octokit.rest.search.code({
-      q: query,
-      per_page: 100, // Max results per page
-    });
+    const allResults: GitHubSearchResult[] = [];
+    let page = 1;
+    let totalCount = 0;
 
-    const results: GitHubSearchResult[] = response.data.items.map((item) => ({
-      repo: item.repository.full_name,
-      path: item.path,
-      url: item.html_url,
-    }));
+    // Fetch all pages
+    while (page <= maxPages) {
+      const response = await octokit.rest.search.code({
+        q: query,
+        per_page: perPage,
+        page: page,
+      });
 
-    console.log(`Found ${results.length} marketplace files on GitHub`);
+      // Store total count from first page
+      if (page === 1) {
+        totalCount = response.data.total_count;
+        console.log(`GitHub reports ${totalCount} total marketplace files`);
+      }
 
-    return results;
+      // Convert and add results
+      const pageResults: GitHubSearchResult[] = response.data.items.map(
+        (item) => ({
+          repo: item.repository.full_name,
+          path: item.path,
+          url: item.html_url,
+        })
+      );
+
+      allResults.push(...pageResults);
+
+      // Stop if we've fetched all available results
+      if (response.data.items.length < perPage) {
+        console.log(`Fetched all ${allResults.length} results (${page} pages)`);
+        break;
+      }
+
+      // Stop if we've reached the total count
+      if (allResults.length >= totalCount) {
+        console.log(
+          `Fetched all ${allResults.length} results (total: ${totalCount})`
+        );
+        break;
+      }
+
+      page++;
+    }
+
+    console.log(`Found ${allResults.length} marketplace files on GitHub`);
+
+    return allResults;
   } catch (error) {
     if (error instanceof Error) {
       console.error("GitHub search failed:", error.message);
 
       // Handle rate limiting
-      if ('status' in error && error.status === 403) {
+      if ("status" in error && error.status === 403) {
         throw new Error("GitHub API rate limit exceeded. Try again later.");
       }
     }

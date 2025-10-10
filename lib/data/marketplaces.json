@@ -6,9 +6,9 @@
     "categories": [
       "community"
     ],
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "stars": 116,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.842Z"
   },
   {
     "repo": "davila7/claude-code-templates",
@@ -17,9 +17,9 @@
     "categories": [
       "community"
     ],
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
-    "stars": 6970,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
+    "stars": 6972,
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "wshobson/agents",
@@ -42,9 +42,9 @@
       "gaming",
       "accessibility"
     ],
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
-    "stars": 15606,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
+    "stars": 15608,
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "anthropics/claude-code",
@@ -56,10 +56,10 @@
       "security"
     ],
     "discoveredAt": "2025-10-10T18:03:09.622Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
-    "stars": 36146,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "stars": 36150,
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "ruvnet/claude-flow",
@@ -69,10 +69,10 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T18:03:09.974Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 8805,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "cexll/myclaude",
@@ -84,10 +84,10 @@
       "advanced"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 755,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "feiskyer/claude-code-settings",
@@ -97,10 +97,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.780Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 530,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "Melvynx/aiblueprint",
@@ -110,10 +110,10 @@
       "essentials"
     ],
     "discoveredAt": "2025-10-10T18:03:09.496Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 8,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "TokenRollAI/cc-plugin",
@@ -123,10 +123,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.523Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "avxkim/personal-marketplace",
@@ -136,10 +136,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.905Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "bengous/claude-code-plugins",
@@ -149,10 +149,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.871Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "siraken/claude-plugins",
@@ -162,23 +162,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.800Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
-  },
-  {
-    "repo": "leobrival/blog-kit",
-    "description": "AI-powered blog article generation with spec-driven development",
-    "pluginCount": 1,
-    "categories": [
-      "productivity"
-    ],
-    "discoveredAt": "2025-10-10T18:03:09.466Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
-    "source": "auto",
-    "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "danielscholl/claude-sdlc",
@@ -188,10 +175,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.825Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "johnclyde/clydehub",
@@ -201,10 +188,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:10.247Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "henkisdabro/claudecode-marketplace",
@@ -217,23 +204,10 @@
       "mcpservers"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
-  },
-  {
-    "repo": "tmc/it2",
-    "description": "cli for iTerm2",
-    "pluginCount": 4,
-    "categories": [
-      "community"
-    ],
-    "discoveredAt": "2025-10-10T18:03:10.033Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
-    "source": "auto",
-    "stars": 6,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "schuyler/duck-soup",
@@ -243,10 +217,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.760Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "TelecomsXChangeAPi/destinations-api-claude-plugin",
@@ -256,10 +230,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.974Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 1,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "eli0shin/cli-lsp-client",
@@ -269,10 +243,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.813Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 15,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "sjungling/claude-plugins",
@@ -282,10 +256,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "cashwu/Claude-Code-Plugin",
@@ -295,25 +269,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.989Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
-  },
-  {
-    "repo": "ShunsukeHayashi/Miyabi",
-    "description": "完全自律型AI開発プラットフォーム Miyabi の公式プラグインコレクション",
-    "pluginCount": 3,
-    "categories": [
-      "automation",
-      "productivity",
-      "agents"
-    ],
-    "discoveredAt": "2025-10-10T18:03:09.502Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
-    "source": "auto",
-    "stars": 19,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "panw3i/claude-plugins",
@@ -323,10 +282,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.508Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "eabay/claude-code-plugins",
@@ -336,10 +295,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.853Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "edmundmiller/dotfiles",
@@ -349,10 +308,10 @@
       "version-control"
     ],
     "discoveredAt": "2025-10-10T18:03:09.800Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 39,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "atxtechbro/dotfiles",
@@ -362,10 +321,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.871Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 5,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "stepankuzmin/claude-code-plugins",
@@ -375,10 +334,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.495Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "ananddtyagi/claude-code-marketplace",
@@ -398,10 +357,10 @@
       "agents"
     ],
     "discoveredAt": "2025-10-10T18:03:09.874Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
-    "stars": 45,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "stars": 46,
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "LAURA-agent/Claude-to-Speech",
@@ -411,10 +370,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.853Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "lpasqualis/lpclaude",
@@ -424,10 +383,10 @@
       "productivity"
     ],
     "discoveredAt": "2025-10-10T18:03:09.853Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 6,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "JeongJaeSoon/claude-code-marketplace",
@@ -437,10 +396,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "shaurgon/claude-meow-marketplace",
@@ -450,30 +409,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.799Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
-  },
-  {
-    "repo": "thkt/claude-config",
-    "description": "",
-    "pluginCount": 8,
-    "categories": [
-      "complete workflow systems",
-      "quick actions",
-      "automation",
-      "git utilities",
-      "documentation",
-      "browser automation",
-      "external tools",
-      "utilities"
-    ],
-    "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
-    "source": "auto",
-    "stars": 2,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.842Z"
   },
   {
     "repo": "jeffh/claude-plugins",
@@ -483,10 +422,10 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T18:03:09.512Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "blogic-cz/blogic-marketplace",
@@ -496,10 +435,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.973Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 1,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "hmps/claude-marketplace",
@@ -509,10 +448,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.859Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "WarrenZhu050413/Warren-Claude-Code-Plugin-Marketplace",
@@ -522,10 +461,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.799Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "jeremylongshore/plugins-Claude-code",
@@ -535,10 +474,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.508Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "MartinGonzalez/claude-plugins",
@@ -548,10 +487,10 @@
       "productivity"
     ],
     "discoveredAt": "2025-10-10T18:03:09.508Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.842Z"
   },
   {
     "repo": "exa-labs/exa-mcp-server",
@@ -561,10 +500,10 @@
       "productivity"
     ],
     "discoveredAt": "2025-10-10T19:02:56.993Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 2876,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "1broseidon/marketplace",
@@ -574,10 +513,10 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T19:02:56.941Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "quant-sentiment-ai/claude-equity-research",
@@ -587,10 +526,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T19:02:56.793Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 4,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "FradSer/dotclaude",
@@ -601,10 +540,10 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T19:02:56.470Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 164,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "Parslee-ai/neo",
@@ -629,10 +568,10 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T19:02:56.540Z",
-    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.842Z"
   },
   {
     "repo": "amitpatole/claude-genkit-plugin",
@@ -646,10 +585,10 @@
       "content"
     ],
     "discoveredAt": "2025-10-10T23:04:37.846Z",
-    "lastUpdated": "2025-10-10T23:04:37.846Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 1,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "MartyBonacci/specswarm",
@@ -659,10 +598,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T23:04:37.821Z",
-    "lastUpdated": "2025-10-10T23:04:37.821Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 1,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "DustyWalker/claude-code-marketplace",
@@ -672,10 +611,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T23:04:37.853Z",
-    "lastUpdated": "2025-10-10T23:04:37.853Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 2,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "Parslee-ai/claude-code-plugins",
@@ -685,10 +624,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T23:04:38.193Z",
-    "lastUpdated": "2025-10-10T23:04:38.193Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "obra/superpowers-marketplace",
@@ -698,10 +637,10 @@
       "productivity"
     ],
     "discoveredAt": "2025-10-10T23:04:37.857Z",
-    "lastUpdated": "2025-10-10T23:04:37.857Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "hnegishi/cc-prtools",
@@ -711,10 +650,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T23:04:38.225Z",
-    "lastUpdated": "2025-10-10T23:04:38.225Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.841Z"
   },
   {
     "repo": "nazymko/claude-code-marketplace",
@@ -724,9 +663,9 @@
       "career tools"
     ],
     "discoveredAt": "2025-10-10T23:04:37.828Z",
-    "lastUpdated": "2025-10-10T23:04:37.828Z",
+    "lastUpdated": "2025-10-10T23:26:52.843Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+    "starsFetchedAt": "2025-10-10T23:26:52.842Z"
   }
 ]

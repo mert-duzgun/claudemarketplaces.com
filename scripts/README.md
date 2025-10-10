@@ -14,7 +14,7 @@ Standalone script for discovering and validating Claude Code marketplaces from G
 ```bash
 bun run crawl
 ```
-Discovers all marketplaces on GitHub, validates them, fetches star counts, and saves to local database.
+Discovers all marketplaces on GitHub, validates them, fetches star counts, and saves to local database. Automatically removes marketplaces that fail validation to maintain database integrity.
 
 ### Test with Limited Results
 ```bash
@@ -61,10 +61,11 @@ bun run scripts/crawl.ts --help
 
 The crawler provides:
 - ✅ Color-coded progress indicators
-- 📊 Summary statistics (discovered, validated, added, updated)
+- 📊 Summary statistics (discovered, validated, added, updated, removed)
 - ⭐ Star counts for each marketplace
 - ⏱️ Execution time and success rate
 - ❌ Validation errors (with `--verbose`)
+- 🧹 Automatic cleanup of invalid marketplaces
 
 ## 🎯 Example Output
 
@@ -93,6 +94,7 @@ The crawler provides:
 [6/6] Saving to database...
   ✅ Added: 0 marketplaces
   ✅ Updated: 10 marketplaces
+  ⚠️  Removed: 4 invalid marketplaces
   ✅ Total: 46 marketplaces
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -102,6 +104,23 @@ The crawler provides:
   📊 Success Rate: 100.0%
   💾 Data saved to lib/data/marketplaces.json
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+```
+
+## 🧹 Database Integrity
+
+The crawler automatically maintains database integrity by removing marketplaces that become invalid:
+
+- **What gets removed**: Marketplaces that were previously discovered but now fail validation
+- **Why removal happens**:
+  - Schema changes in the marketplace.json file
+  - Files deleted or made private
+  - Validation rule updates
+  - Invalid JSON or missing required fields
+- **Safety**: Only removes discovered repos that fail validation, never removes marketplaces not found by GitHub search
+
+When a marketplace is removed, you'll see a warning in the output:
+```
+⚠️  Removed: 4 invalid marketplaces
 ```
 
 ## 🐛 Troubleshooting

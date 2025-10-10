@@ -39,6 +39,7 @@ export async function GET(request: NextRequest) {
         discovered: 0,
         added: 0,
         updated: 0,
+        removed: 0,
         duration: Date.now() - startTime,
       });
     }
@@ -93,10 +94,11 @@ export async function GET(request: NextRequest) {
     console.log(`Fetched stars for ${Array.from(starMap.values()).filter(s => s !== null).length} repos`);
 
     // Step 5: Merge with existing marketplaces
-    const mergeResult = await mergeMarketplaces(marketplacesWithStars);
+    const allDiscoveredRepos = new Set(searchResults.map((r) => r.repo));
+    const mergeResult = await mergeMarketplaces(marketplacesWithStars, allDiscoveredRepos);
 
     console.log(
-      `Crawl complete: ${mergeResult.added} added, ${mergeResult.updated} updated`
+      `Crawl complete: ${mergeResult.added} added, ${mergeResult.updated} updated, ${mergeResult.removed} removed`
     );
 
     // Return summary
@@ -107,6 +109,7 @@ export async function GET(request: NextRequest) {
       validated: validMarketplaces.length,
       added: mergeResult.added,
       updated: mergeResult.updated,
+      removed: mergeResult.removed,
       total: mergeResult.total,
       failed: failedValidations.length,
       errors: failedValidations.slice(0, 10).map((f) => ({

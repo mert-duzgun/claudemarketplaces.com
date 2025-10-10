@@ -234,10 +234,16 @@ async function runCrawler() {
       logWarning("Results not saved due to --dry-run flag");
     } else {
       logStep(6, "Saving to database...");
-      const mergeResult = await mergeMarketplaces(marketplacesWithStars);
+
+      // Track all discovered repos (both valid and invalid)
+      const allDiscoveredRepos = new Set(resultsToProcess.map((r) => r.repo));
+      const mergeResult = await mergeMarketplaces(marketplacesWithStars, allDiscoveredRepos);
 
       logSuccess(`Added: ${mergeResult.added} marketplaces`);
       logSuccess(`Updated: ${mergeResult.updated} marketplaces`);
+      if (mergeResult.removed > 0) {
+        logWarning(`Removed: ${mergeResult.removed} invalid marketplaces`);
+      }
       logSuccess(`Total: ${mergeResult.total} marketplaces`);
     }
 
