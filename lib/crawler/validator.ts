@@ -45,8 +45,13 @@ export async function validateMarketplace(
     return { valid: false, errors };
   }
 
-  // Step 4: Get repository description (use marketplace description as fallback)
-  let description = marketplaceData.description || "";
+  // Step 4: Get repository description (check both metadata patterns)
+  // Pattern A: root-level description
+  // Pattern B: metadata.description
+  let description =
+    marketplaceData.description ||
+    marketplaceData.metadata?.description ||
+    "";
   if (!description) {
     description = await getRepoDescription(repo);
   }
