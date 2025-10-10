@@ -5,6 +5,7 @@ import {
 } from "@/lib/crawler/github-search";
 import { validateMarketplaces } from "@/lib/crawler/validator";
 import { mergeMarketplaces } from "@/lib/crawler/storage";
+import { batchFetchStars } from "@/lib/crawler/github-stars";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300; // 5 minutes max execution time
@@ -75,8 +76,24 @@ export async function GET(request: NextRequest) {
       console.error("Validation errors:", failedValidations);
     }
 
-    // Step 4: Merge with existing marketplaces
-    const mergeResult = await mergeMarketplaces(validMarketplaces);
+    // Step 4: Fetch GitHub stars for all marketplaces
+    console.log("Fetching GitHub stars...");
+    const repos = validMarketplaces.map((m) => m.repo);
+    const starMap = await batchFetchStars(repos);
+
+    // Add stars to marketplaces
+    const marketplacesWithStars = validMarketplaces.map((marketplace) => ({
+      ...marketplace,
+      stars: starMap.get(marketplace.repo) ?? marketplace.stars,
+      starsFetchedAt: starMap.get(marketplace.repo) !== null
+        ? new Date().toISOString()
+        : marketplace.starsFetchedAt,
+    }));
+
+    console.log(`Fetched stars for ${Array.from(starMap.values()).filter(s => s !== null).length} repos`);
+
+    // Step 5: Merge with existing marketplaces
+    const mergeResult = await mergeMarketplaces(marketplacesWithStars);
 
     console.log(
       `Crawl complete: ${mergeResult.added} added, ${mergeResult.updated} updated`

@@ -24,4 +24,6 @@ export interface Marketplace {
   discoveredAt?: string;
   lastUpdated?: string;
   source?: 'manual' | 'auto';
+  stars?: number;
+  starsFetchedAt?: string;
 }
