@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Comfortaa, Space_Mono } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 // Playfair Display for elegant headings
@@ -47,6 +48,7 @@ export default function RootLayout({
         className={`${playfair.variable} ${comfortaa.variable} ${spaceMono.variable} ${bbhSans.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
