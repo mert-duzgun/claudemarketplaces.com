@@ -1,17 +1,31 @@
 import { Marketplace } from "@/lib/types";
-import marketplacesData from "./marketplaces.json";
+import { readMarketplaces } from "@/lib/crawler/storage";
 
-const marketplaces = marketplacesData as Marketplace[];
-
-export function getAllMarketplaces(): Marketplace[] {
-  return marketplaces;
+/**
+ * Fetch all marketplaces
+ * Server-side: reads directly from Vercel Blob or local file
+ * This works during build time and runtime
+ */
+export async function getAllMarketplaces(): Promise<Marketplace[]> {
+  try {
+    // Directly call the storage layer - works in all contexts
+    return await readMarketplaces();
+  } catch (error) {
+    console.error("Error fetching marketplaces:", error);
+    // Return empty array as fallback
+    return [];
+  }
 }
 
-export function getMarketplacesByCategory(category: string): Marketplace[] {
+export async function getMarketplacesByCategory(
+  category: string
+): Promise<Marketplace[]> {
+  const marketplaces = await getAllMarketplaces();
   return marketplaces.filter((m) => m.categories.includes(category));
 }
 
-export function getCategories(): string[] {
+export async function getCategories(): Promise<string[]> {
+  const marketplaces = await getAllMarketplaces();
   const categories = new Set(marketplaces.flatMap((m) => m.categories));
   return Array.from(categories).sort();
 }

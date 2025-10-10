@@ -59,11 +59,12 @@ export async function writeMarketplaces(
         contentType: "application/json",
       });
       console.log("Saved marketplaces to Vercel Blob");
+    } else {
+      // Only write to local file in development (no BLOB_TOKEN)
+      // This avoids EROFS errors on Vercel's read-only filesystem
+      await fs.writeFile(MARKETPLACES_FILE, jsonData, "utf-8");
+      console.log("Saved marketplaces to local file (development mode)");
     }
-
-    // Also write to local file (for git tracking and development)
-    await fs.writeFile(MARKETPLACES_FILE, jsonData, "utf-8");
-    console.log("Saved marketplaces to local file");
   } catch (error) {
     console.error("Error writing marketplaces:", error);
     throw error;
