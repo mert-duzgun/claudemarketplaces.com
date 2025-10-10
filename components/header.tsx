@@ -1,6 +1,14 @@
 import Link from "next/link";
 
-export function Header() {
+interface HeaderProps {
+  subtitle?: string;
+  showAboutLink?: boolean;
+}
+
+export function Header({
+  subtitle = "A comprehensive directory for discovering plugin marketplaces",
+  showAboutLink = true,
+}: HeaderProps) {
   return (
     <header>
       <div className="container mx-auto px-4 py-6">
@@ -14,9 +22,15 @@ export function Header() {
 
           {/* Tagline */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <p className="text-lg text-muted-foreground">
-              Discover and share Claude Code marketplaces
-            </p>
+            <p className="text-lg text-muted-foreground">{subtitle}</p>
+            {showAboutLink && (
+              <Link
+                href="/about"
+                className="text-sm text-primary hover:underline whitespace-nowrap"
+              >
+                How does this work?
+              </Link>
+            )}
           </div>
         </div>
       </div>

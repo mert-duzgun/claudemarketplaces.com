@@ -47,9 +47,14 @@ export function Footer() {
             <h3 className="font-semibold mb-3">Community</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/submit" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Submit a Marketplace
+                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                  About
                 </Link>
+              </li>
+              <li>
+                <a href="https://github.com/mert-duzgun/claudemarketplaces.com" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  Star on GitHub
+                </a>
               </li>
               <li>
                 <a href="https://github.com/mert-duzgun/claudemarketplaces.com/issues" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
