@@ -5,6 +5,7 @@ import { MarketplaceSearch } from "@/components/marketplace-search";
 import { Badge } from "@/components/ui/badge";
 import { useMarketplaceFilters } from "@/lib/hooks/use-marketplace-filters";
 import { Marketplace } from "@/lib/types";
+import { FILTER_PRESETS } from "@/lib/config/filter-presets";
 
 interface MarketplaceContentProps {
   marketplaces: Marketplace[];
@@ -17,15 +18,20 @@ export function MarketplaceContent({
 }: MarketplaceContentProps) {
   const {
     searchQuery,
+    filterPreset,
     selectedCategories,
     filteredMarketplaces,
     filteredCount,
     setSearchQuery,
+    setFilterPreset,
     toggleCategory,
     clearFilters,
   } = useMarketplaceFilters(marketplaces);
 
-  const hasActiveFilters = searchQuery || selectedCategories.length > 0;
+  const hasActiveFilters =
+    searchQuery ||
+    selectedCategories.length > 0 ||
+    (filterPreset && filterPreset !== "all");
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -34,16 +40,21 @@ export function MarketplaceContent({
         <MarketplaceSearch value={searchQuery} onChange={setSearchQuery} />
       </div>
 
-      {/* Horizontal Scrollable Categories */}
+      {/* Horizontal Scrollable Filter Presets and Categories */}
       <div className="mb-6 -mx-4 px-4">
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-          <Badge
-            variant={selectedCategories.length === 0 ? "default" : "outline"}
-            className="cursor-pointer capitalize shrink-0"
-            onClick={() => clearFilters()}
-          >
-            All
-          </Badge>
+          {/* Filter Presets */}
+          {FILTER_PRESETS.map((preset) => (
+            <Badge
+              key={preset.id}
+              variant={filterPreset === preset.id ? "default" : "outline"}
+              className="cursor-pointer capitalize shrink-0"
+              onClick={() => setFilterPreset(preset.id)}
+            >
+              {preset.label}
+            </Badge>
+          ))}
+          {/* Category Filters */}
           {categories.map((category) => {
             const isSelected = selectedCategories.includes(category);
             return (
