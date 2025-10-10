@@ -1,26 +1,124 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.625rem;
+  /* Claude Brand Colors - Light Mode */
+  --background: #FDFDF7; /* Pale cream */
+  --foreground: #0E0E0E; /* Dark charcoal */
+  --card: #FFFFFF;
+  --card-foreground: #0E0E0E;
+  --popover: #FFFFFF;
+  --popover-foreground: #0E0E0E;
+  --primary: #D4A27F; /* Claude amber/orange */
+  --primary-foreground: #0E0E0E;
+  --secondary: #F5F5F0;
+  --secondary-foreground: #0E0E0E;
+  --muted: #F5F5F0;
+  --muted-foreground: #6B6B6B;
+  --accent: #D4A27F;
+  --accent-foreground: #0E0E0E;
+  --destructive: #DC2626;
+  --border: #E5E5E0;
+  --input: #E5E5E0;
+  --ring: #D4A27F;
+  --chart-1: #D4A27F;
+  --chart-2: #B8956F;
+  --chart-3: #9C8860;
+  --chart-4: #807B51;
+  --chart-5: #646E42;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #0E0E0E;
+  --sidebar-primary: #D4A27F;
+  --sidebar-primary-foreground: #0E0E0E;
+  --sidebar-accent: #F5F5F0;
+  --sidebar-accent-foreground: #0E0E0E;
+  --sidebar-border: #E5E5E0;
+  --sidebar-ring: #D4A27F;
+}
+
+.dark {
+  /* Claude Brand Colors - Dark Mode */
+  --background: #09090B; /* Almost black */
+  --foreground: #FAFAFA; /* Off-white */
+  --card: #18181B;
+  --card-foreground: #FAFAFA;
+  --popover: #18181B;
+  --popover-foreground: #FAFAFA;
+  --primary: #D4A27F; /* Claude amber/orange */
+  --primary-foreground: #0E0E0E;
+  --secondary: #27272A;
+  --secondary-foreground: #FAFAFA;
+  --muted: #27272A;
+  --muted-foreground: #A1A1AA;
+  --accent: #D4A27F;
+  --accent-foreground: #0E0E0E;
+  --destructive: #EF4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #D4A27F;
+  --chart-1: #D4A27F;
+  --chart-2: #B8956F;
+  --chart-3: #9C8860;
+  --chart-4: #807B51;
+  --chart-5: #646E42;
+  --sidebar: #18181B;
+  --sidebar-foreground: #FAFAFA;
+  --sidebar-primary: #D4A27F;
+  --sidebar-primary-foreground: #0E0E0E;
+  --sidebar-accent: #27272A;
+  --sidebar-accent-foreground: #FAFAFA;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: #D4A27F;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  body {
+    @apply bg-background text-foreground;
+  }
 }

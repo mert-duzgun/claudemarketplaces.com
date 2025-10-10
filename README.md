@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Claude Code Plugins
+
+A marketplace for discovering and sharing [Claude Code](https://claude.ai/code) extensions.
+
+## Features
+
+- 🔍 **Search & Browse**: Find plugins across all marketplaces with powerful search and filtering
+- 🎨 **Claude-Branded**: Beautiful UI with Claude's signature amber/copper colors and typography
+- 📦 **Easy Installation**: One-click copy of installation commands
+- 🚀 **Static & Fast**: Built with Next.js 15 and Turbopack for blazing-fast performance
+- 🌙 **Dark Mode**: Automatic dark mode support
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- [Bun](https://bun.sh/) (package manager)
+- Node.js 20+
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+# Clone the repository
+git clone https://github.com/claude-plugins/claudeplugins.com.git
+cd claudeplugins.com
+
+# Install dependencies
+bun install
+
+# Run development server
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to see the marketplace.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+app/
+├── page.tsx              # Home page with plugin grid
+├── plugin/[id]/          # Plugin detail pages
+├── submit/               # Submit plugin page
+├── layout.tsx            # Root layout
+└── globals.css           # Global styles
 
-## Learn More
+components/
+├── header.tsx            # Header with ASCII art logo
+├── footer.tsx            # Footer
+├── plugin-card.tsx       # Plugin card component
+├── plugin-grid.tsx       # Grid with search/filter
+└── ui/                   # shadcn/ui components
 
-To learn more about Next.js, take a look at the following resources:
+lib/
+├── data/
+│   └── plugins.ts        # Plugin data and queries
+└── types.ts              # TypeScript types
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Adding Plugins
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To add your plugin to the marketplace:
 
-## Deploy on Vercel
+1. Fork the [claude-plugins/registry](https://github.com/claude-plugins/registry) repository
+2. Edit `.claude-plugin/marketplace.json` to add your plugin
+3. Create a pull request
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+See the [Submit Plugin](https://claudeplugins.com/submit) page for detailed instructions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+- **Framework**: Next.js 15 (App Router + Turbopack)
+- **Language**: TypeScript 5
+- **Styling**: Tailwind CSS v4
+- **Components**: shadcn/ui
+- **Package Manager**: Bun
+- **Deployment**: Vercel
+
+## Development
+
+```bash
+# Run development server
+bun dev
+
+# Build for production
+bun run build
+
+# Start production server
+bun start
+
+# Lint code
+bun run lint
+```
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## License
+
+MIT
+
+## Links
+
+- [Website](https://claudeplugins.com)
+- [Plugin Registry](https://github.com/claude-plugins/registry)
+- [Claude Code Documentation](https://docs.claude.com/en/docs/claude-code)
