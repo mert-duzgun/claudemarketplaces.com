@@ -8,7 +8,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Search, RefreshCw, Github } from "lucide-react";
+import { ExternalLink, Search, RefreshCw, Github, Mail } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -159,6 +159,31 @@ export default function AboutPage() {
                   <span>No manual submission or approval process required</span>
                 </li>
               </ul>
+            </CardContent>
+          </Card>
+
+          {/* Validation Issues */}
+          <Card className="mb-8">
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <Mail className="h-6 w-6 text-primary" />
+                <CardTitle>Validation Issues?</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-sm text-muted-foreground">
+                If you believe your marketplace is valid but couldn&apos;t be validated by our crawler,
+                please reach out so we can investigate the issue.
+              </p>
+              <Button variant="outline" asChild>
+                <a
+                  href="mailto:mert@duzgun.dev?subject=Marketplace Validation Issue"
+                  className="flex items-center gap-2"
+                >
+                  <Mail className="h-4 w-4" />
+                  Contact: mert@duzgun.dev
+                </a>
+              </Button>
             </CardContent>
           </Card>
 
