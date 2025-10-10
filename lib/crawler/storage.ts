@@ -1,9 +1,10 @@
-import { put, head } from "@vercel/blob";
+import { put, list } from "@vercel/blob";
 import { Marketplace } from "@/lib/types";
 import fs from "fs/promises";
 import path from "path";
 
 const BLOB_TOKEN = process.env.BLOB_READ_WRITE_TOKEN;
+const BLOB_PATHNAME = "marketplaces.json";
 const MARKETPLACES_FILE = path.join(
   process.cwd(),
   "lib/data/marketplaces.json"
@@ -16,18 +17,27 @@ export async function readMarketplaces(): Promise<Marketplace[]> {
   try {
     // Try to read from Vercel Blob first (production)
     if (BLOB_TOKEN) {
-      const blobUrl = "https://blob.vercel-storage.com/marketplaces.json";
-
       try {
-        await head(blobUrl, { token: BLOB_TOKEN });
-        const response = await fetch(blobUrl);
-        if (response.ok) {
-          const data = await response.json();
-          console.log("Loaded marketplaces from Vercel Blob");
-          return data;
+        // Find the blob using list() - this always returns the correct URL
+        const { blobs } = await list({
+          prefix: BLOB_PATHNAME,
+          token: BLOB_TOKEN,
+          limit: 1,
+        });
+
+        if (blobs.length > 0) {
+          const blobUrl = blobs[0].url;
+          const response = await fetch(blobUrl);
+          if (response.ok) {
+            const data = await response.json();
+            console.log(`Loaded marketplaces from Vercel Blob: ${blobUrl}`);
+            return data;
+          }
         }
-      } catch {
-        console.log("Vercel Blob not available, falling back to local file");
+
+        console.log("Blob not found, falling back to local file");
+      } catch (error) {
+        console.log("Vercel Blob error, falling back to local file:", error);
       }
     }
 
@@ -53,12 +63,15 @@ export async function writeMarketplaces(
   try {
     // Write to Vercel Blob (production)
     if (BLOB_TOKEN) {
-      await put("marketplaces.json", jsonData, {
+      // Upload blob with overwrite enabled
+      const blob = await put(BLOB_PATHNAME, jsonData, {
         access: "public",
         token: BLOB_TOKEN,
         contentType: "application/json",
+        addRandomSuffix: false, // Keep the same filename
+        allowOverwrite: true, // Allow overwriting existing blob
       });
-      console.log("Saved marketplaces to Vercel Blob");
+      console.log(`Saved marketplaces to Vercel Blob: ${blob.url}`);
     } else {
       // Only write to local file in development (no BLOB_TOKEN)
       // This avoids EROFS errors on Vercel's read-only filesystem
@@ -74,9 +87,7 @@ export async function writeMarketplaces(
 /**
  * Merge discovered marketplaces with existing ones
  */
-export async function mergeMarketplaces(
-  discovered: Marketplace[]
-): Promise<{
+export async function mergeMarketplaces(discovered: Marketplace[]): Promise<{
   added: number;
   updated: number;
   total: number;
