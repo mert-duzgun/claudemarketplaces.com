@@ -6,6 +6,12 @@
     "categories": ["development", "productivity", "official"]
   },
   {
+    "repo": "EveryInc/every-marketplace",
+    "description": "Official Every plugin marketplace for Claude Code extensions",
+    "pluginCount": 1,
+    "categories": ["development", "productivity", "official"]
+  },
+  {
     "repo": "davila7/claude-code-templates",
     "description": "Community-driven collection of templates and workflows for Next.js, Supabase, testing, security, AI/ML, DevOps, and documentation",
     "pluginCount": 8,
