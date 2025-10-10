@@ -35,7 +35,7 @@ export default async function Image() {
             fontSize: 72,
             fontWeight: 400,
             letterSpacing: "0.05em",
-            color: "#D4A27F",
+            color: "#ee7e60",
             marginBottom: "40px",
             textAlign: "center",
           }}
@@ -62,7 +62,7 @@ export default async function Image() {
             display: "flex",
             marginTop: "60px",
             fontSize: 24,
-            color: "#D4A27F",
+            color: "#ee7e60",
           }}
         >
           claudemarketplaces.com
