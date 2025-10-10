@@ -12,8 +12,34 @@ export const size = {
 
 export const contentType = "image/png";
 
+async function loadGoogleFont(font: string, text: string) {
+  const url = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(
+    text
+  )}`;
+  const css = await (await fetch(url)).text();
+  const resource = css.match(
+    /src: url\((.+)\) format\('(opentype|truetype)'\)/
+  );
+
+  if (resource) {
+    const response = await fetch(resource[1]);
+    if (response.status == 200) {
+      return await response.arrayBuffer();
+    }
+  }
+
+  throw new Error("failed to load font data");
+}
+
 // Image generation
 export default async function Image() {
+  // Load BBH Sans Bartle font from GitHub
+  const bbhFontData = await fetch(
+    "https://github.com/mert-duzgun/claudemarketplaces.com/raw/main/public/BBH_Sans_Bartle/BBHSansBartle-Regular.ttf"
+  ).then((res) => res.arrayBuffer());
+
+  const description = "Discover and share Claude Code marketplaces";
+
   return new ImageResponse(
     (
       <div
@@ -32,13 +58,13 @@ export default async function Image() {
         <div
           style={{
             display: "flex",
-            fontSize: 72,
+            fontSize: 56,
             fontWeight: 400,
             letterSpacing: "0.05em",
             color: "#ee7e60",
-            marginBottom: "40px",
+            marginBottom: "64px",
             textAlign: "center",
-            fontFamily: "var(--font-bbh-sans)",
+            fontFamily: "BBH Sans Bartle",
           }}
         >
           CLAUDE CODE MARKETPLACES
@@ -48,30 +74,33 @@ export default async function Image() {
         <div
           style={{
             display: "flex",
-            fontSize: 32,
-            color: "#666666",
+            fontSize: 40,
+            color: "#000",
             textAlign: "center",
-            maxWidth: "800px",
+            maxWidth: "1000px",
+            fontFamily: "Playfair Display",
           }}
         >
-          Discover and share Claude Code marketplaces
-        </div>
-
-        {/* Decorative Element */}
-        <div
-          style={{
-            display: "flex",
-            marginTop: "60px",
-            fontSize: 24,
-            color: "#ee7e60",
-          }}
-        >
-          claudemarketplaces.com
+          {description}
         </div>
       </div>
     ),
     {
       ...size,
+      fonts: [
+        {
+          name: "BBH Sans Bartle",
+          data: bbhFontData,
+          style: "normal",
+          weight: 400,
+        },
+        {
+          name: "Playfair Display",
+          data: await loadGoogleFont("Playfair Display", description),
+          style: "normal",
+          weight: 400,
+        },
+      ],
     }
   );
 }
