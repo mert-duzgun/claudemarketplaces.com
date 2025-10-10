@@ -17,9 +17,8 @@ export interface Plugin {
 }
 
 export interface Marketplace {
-  name: string;
-  owner: string;
+  repo: string;
   description: string;
-  repositoryUrl: string;
   pluginCount: number;
+  categories: string[];
 }

@@ -14,10 +14,10 @@ export default function SubmitPage() {
           {/* Hero */}
           <div className="mb-12 text-center">
             <h1 className="text-4xl font-bold mb-4">
-              Submit Your Plugin
+              Submit Your Marketplace
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Share your Claude Code plugin with the community. Follow these steps to add your plugin to the marketplace.
+              Share your plugin marketplace with the community. Follow these steps to add your marketplace to the directory.
             </p>
           </div>
 
@@ -30,9 +30,9 @@ export default function SubmitPage() {
                     1
                   </div>
                   <div>
-                    <CardTitle>Fork the Registry</CardTitle>
+                    <CardTitle>Fork the Repository</CardTitle>
                     <CardDescription>
-                      Create your own copy of the claude-plugins/registry repository
+                      Create your own copy of the mert-duzgun/claudemarketplaces.com repository
                     </CardDescription>
                   </div>
                 </div>
@@ -40,7 +40,7 @@ export default function SubmitPage() {
               <CardContent>
                 <Button asChild className="w-full sm:w-auto">
                   <a
-                    href="https://github.com/claude-plugins/registry/fork"
+                    href="https://github.com/mert-duzgun/claudemarketplaces.com/fork"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2"
@@ -60,9 +60,9 @@ export default function SubmitPage() {
                     2
                   </div>
                   <div>
-                    <CardTitle>Edit marketplace.json</CardTitle>
+                    <CardTitle>Edit marketplaces.json</CardTitle>
                     <CardDescription>
-                      Add your plugin information to the marketplace file
+                      Add your marketplace information to the data file
                     </CardDescription>
                   </div>
                 </div>
@@ -70,26 +70,19 @@ export default function SubmitPage() {
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-sm text-muted-foreground">
-                    Add your plugin entry to the <code className="bg-muted px-2 py-1 rounded">marketplace.json</code> file in your fork:
+                    Add your marketplace entry to <code className="bg-muted px-2 py-1 rounded">lib/data/marketplaces.json</code>:
                   </p>
                   <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
                     <code>{`{
-  "name": "your-plugin-name",
-  "description": "Brief description of your plugin",
-  "source": "github:yourusername/your-repo",
-  "version": "1.0.0",
-  "author": {
-    "name": "Your Name",
-    "email": "you@example.com"
-  },
-  "category": "development",
-  "license": "MIT",
-  "keywords": ["keyword1", "keyword2"]
+  "repo": "yourusername/your-repo",
+  "description": "Brief description of your marketplace",
+  "pluginCount": 5,
+  "categories": ["development", "productivity"]
 }`}</code>
                   </pre>
                   <Button variant="outline" asChild className="w-full sm:w-auto">
                     <a
-                      href="https://github.com/claude-plugins/registry/edit/main/.claude-plugin/marketplace.json"
+                      href="https://github.com/mert-duzgun/claudemarketplaces.com/edit/main/lib/data/marketplaces.json"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"
@@ -120,11 +113,11 @@ export default function SubmitPage() {
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-sm text-muted-foreground">
-                    Once you&apos;ve added your plugin, create a pull request with a clear title and description.
+                    Once you&apos;ve added your marketplace, create a pull request with a clear title and description.
                   </p>
                   <Button asChild className="w-full sm:w-auto">
                     <a
-                      href="https://github.com/claude-plugins/registry/compare"
+                      href="https://github.com/mert-duzgun/claudemarketplaces.com/compare"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center justify-center gap-2"
@@ -142,16 +135,16 @@ export default function SubmitPage() {
           {/* Requirements */}
           <Card className="mt-8">
             <CardHeader>
-              <CardTitle>Plugin Requirements</CardTitle>
+              <CardTitle>Marketplace Requirements</CardTitle>
               <CardDescription>
-                Make sure your plugin meets these criteria before submitting
+                Make sure your marketplace meets these criteria before submitting
               </CardDescription>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-sm">
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
-                  <span>Valid <code className="bg-muted px-1.5 py-0.5 rounded text-xs">plugin.json</code> manifest file</span>
+                  <span>Valid Claude Code plugin marketplace structure</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
@@ -163,11 +156,11 @@ export default function SubmitPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
-                  <span>Open source license (MIT, Apache 2.0, etc.)</span>
+                  <span>At least one working plugin</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary mt-1">✓</span>
-                  <span>Tested and functional</span>
+                  <span>Accurate plugin count and categories</span>
                 </li>
               </ul>
             </CardContent>
@@ -180,26 +173,26 @@ export default function SubmitPage() {
             </CardHeader>
             <CardContent className="space-y-3">
               <p className="text-sm text-muted-foreground">
-                Check out the documentation or reach out to the community
+                Learn more about creating plugin marketplaces
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button variant="outline" asChild>
                   <a
-                    href="https://docs.claude.com/en/docs/claude-code/plugins"
+                    href="https://github.com/mert-duzgun/claudemarketplaces.com/blob/main/README.md"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Plugin Documentation
+                    README
                     <ExternalLink className="h-3 w-3 ml-2" />
                   </a>
                 </Button>
                 <Button variant="outline" asChild>
                   <a
-                    href="https://github.com/claude-plugins/registry"
+                    href="https://github.com/mert-duzgun/claudemarketplaces.com"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    Registry Repository
+                    Repository
                     <ExternalLink className="h-3 w-3 ml-2" />
                   </a>
                 </Button>

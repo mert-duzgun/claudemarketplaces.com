@@ -6,9 +6,9 @@ export function Footer() {
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-semibold mb-3">Claude Code Plugins</h3>
+            <h3 className="font-semibold mb-3">Claude Code Marketplaces</h3>
             <p className="text-sm text-muted-foreground">
-              A marketplace for discovering and sharing Claude Code extensions.
+              A directory for discovering plugin marketplaces for Claude Code. Browse curated collections from official sources and the community.
             </p>
           </div>
 
@@ -16,19 +16,29 @@ export function Footer() {
             <h3 className="font-semibold mb-3">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="https://docs.claude.com/en/docs/claude-code/plugins" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Plugin Documentation
-                </Link>
+                <a href="https://docs.claude.com/en/docs/claude-code/plugin-marketplaces#marketplace-schema" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  Plugin Marketplaces
+                </a>
               </li>
               <li>
-                <Link href="https://docs.claude.com/en/docs/claude-code/plugin-marketplaces" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Marketplace Guide
-                </Link>
+                <a href="https://www.anthropic.com/news/claude-code-plugins" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  Announcement (Blog)
+                </a>
               </li>
               <li>
-                <Link href="https://github.com/claude-plugins" className="text-muted-foreground hover:text-foreground transition-colors">
-                  GitHub Organization
-                </Link>
+                <a href="https://x.com/AnthropicAI/status/1878133858093199712" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  Announcement (X)
+                </a>
+              </li>
+              <li>
+                <a href="https://docs.claude.com/en/docs/claude-code/plugins-reference" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  Plugins Reference
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/mert-duzgun/claudemarketplaces.com" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  GitHub Repository
+                </a>
               </li>
             </ul>
           </div>
@@ -38,20 +48,20 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/submit" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Submit a Plugin
+                  Submit a Marketplace
                 </Link>
               </li>
               <li>
-                <Link href="https://github.com/claude-plugins/registry" className="text-muted-foreground hover:text-foreground transition-colors">
-                  Registry Repository
-                </Link>
+                <a href="https://github.com/mert-duzgun/claudemarketplaces.com/issues" className="text-muted-foreground hover:text-foreground transition-colors" target="_blank" rel="noopener noreferrer">
+                  Report an Issue
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-border text-center text-sm text-muted-foreground">
-          <p>Built for the Claude Code community</p>
+          <p>Built for the Claude Code community with Claude Code</p>
         </div>
       </div>
     </footer>
