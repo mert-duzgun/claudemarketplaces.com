@@ -1,15 +1,17 @@
 # GitHub Marketplace Crawler
 
-This project includes an automated crawler that discovers Claude Code plugin marketplaces from GitHub every hour.
+This project includes an automated crawler that discovers Claude Code plugin marketplaces from GitHub daily at midnight UTC.
 
 ## How It Works
 
 The crawler:
 1. **Searches GitHub** for repositories containing `.claude-plugin/marketplace.json` files
-2. **Validates** each marketplace file against the Claude marketplace schema
-3. **Checks** that repositories are publicly accessible and plugins have required fields
-4. **Merges** discovered marketplaces with existing ones in `lib/data/marketplaces.json`
-5. **Runs hourly** via Vercel Cron
+2. **Fetches** each marketplace.json file from discovered repositories
+3. **Validates** each marketplace file against the Claude marketplace schema
+4. **Checks** that repositories are publicly accessible and plugins have required fields
+5. **Fetches GitHub stars** for all validated repositories to track popularity
+6. **Merges** discovered marketplaces with existing ones in `lib/data/marketplaces.json`
+7. **Runs daily** at midnight UTC via Vercel Cron
 
 ## Setup Instructions
 
@@ -32,8 +34,9 @@ Create a `.env.local` file:
 # Required: GitHub token for API access
 GITHUB_TOKEN=ghp_your_actual_github_token_here
 
-# Required: Secret for protecting cron endpoint
+# Optional: Secret for protecting manual endpoint triggers
 # Generate with: openssl rand -base64 32
+# Note: Not needed for Vercel Cron (automatically authenticated)
 CRON_SECRET=your_random_secret_here
 
 # Optional: Vercel Blob token (auto-provided by Vercel in production)
@@ -45,9 +48,9 @@ CRON_SECRET=your_random_secret_here
 1. Go to your project settings on Vercel
 2. Navigate to "Environment Variables"
 3. Add the following variables:
-   - `GITHUB_TOKEN`: Your GitHub Personal Access Token (mark as **secret**)
-   - `CRON_SECRET`: A random secret string (mark as **secret**)
-   - `BLOB_READ_WRITE_TOKEN`: Auto-provided by Vercel Blob (if using)
+   - `GITHUB_TOKEN`: Your GitHub Personal Access Token (mark as **secret**) - **Required**
+   - `CRON_SECRET`: A random secret string (mark as **secret**) - **Optional** (only for manual triggers)
+   - `BLOB_READ_WRITE_TOKEN`: Auto-provided by Vercel Blob (if using) - **Optional**
 
 ### 3. Deploy to Vercel
 
@@ -62,16 +65,26 @@ vercel
 git push origin main
 ```
 
-The cron job will automatically start running hourly once deployed.
+The cron job will automatically start running daily at midnight UTC once deployed.
 
 ## Manual Trigger
 
-You can manually trigger the crawler by making a POST request:
+You can manually trigger the crawler by making a GET or POST request:
 
 ```bash
+# Without authentication (if endpoint is publicly accessible)
+curl -X GET https://your-domain.vercel.app/api/crawl
+
+# Or with authentication (recommended for security)
+curl -X GET https://your-domain.vercel.app/api/crawl \
+  -H "Authorization: Bearer YOUR_CRON_SECRET"
+
+# POST method also works
 curl -X POST https://your-domain.vercel.app/api/crawl \
   -H "Authorization: Bearer YOUR_CRON_SECRET"
 ```
+
+**Note:** Vercel Cron Jobs are automatically authenticated by Vercel's infrastructure and don't need the Authorization header. The CRON_SECRET is optional and only used for manual triggers to prevent unauthorized access.
 
 ## API Response
 
@@ -97,7 +110,7 @@ The crawler endpoint returns JSON with detailed statistics:
 
 ```
 ┌─────────────────────────────────────────┐
-│      Vercel Cron (Hourly Trigger)       │
+│   Vercel Cron (Daily at Midnight UTC)   │
 └──────────────┬──────────────────────────┘
                │
                ▼
@@ -105,28 +118,35 @@ The crawler endpoint returns JSON with detailed statistics:
 │      /api/crawl (API Route)              │
 └──────────────┬──────────────────────────┘
                │
-        ┌──────┴──────┐
-        │             │
-        ▼             ▼
-┌────────────┐  ┌────────────┐
-│  GitHub    │  │ Validator  │
-│  Search    │  │  Service   │
-└────────────┘  └────────────┘
-        │             │
-        └──────┬──────┘
-               ▼
-      ┌────────────────┐
-      │    Storage     │
-      │    Service     │
-      └────────────────┘
-               │
-        ┌──────┴──────┐
-        │             │
-        ▼             ▼
-┌─────────────┐ ┌─────────────┐
-│ Vercel Blob │ │ Local JSON  │
-│  (Runtime)  │ │  (Builds)   │
-└─────────────┘ └─────────────┘
+        ┌──────┴──────────┐
+        │                 │
+        ▼                 ▼
+┌────────────┐      ┌────────────┐
+│  GitHub    │      │ Validator  │
+│  Search    │      │  Service   │
+└────────────┘      └────────────┘
+        │                 │
+        └────────┬────────┘
+                 │
+                 ▼
+        ┌────────────────┐
+        │  GitHub Stars  │
+        │    Fetcher     │
+        └────────────────┘
+                 │
+                 ▼
+        ┌────────────────┐
+        │    Storage     │
+        │    Service     │
+        └────────────────┘
+                 │
+          ┌──────┴──────┐
+          │             │
+          ▼             ▼
+  ┌─────────────┐ ┌─────────────┐
+  │ Vercel Blob │ │ Local JSON  │
+  │  (Runtime)  │ │  (Builds)   │
+  └─────────────┘ └─────────────┘
 ```
 
 ## Files Structure
@@ -134,7 +154,8 @@ The crawler endpoint returns JSON with detailed statistics:
 ```
 lib/
 ├── crawler/
-│   ├── github-search.ts    # GitHub API integration
+│   ├── github-search.ts    # GitHub API integration & repo access
+│   ├── github-stars.ts     # GitHub stars fetcher (batch & individual)
 │   ├── validator.ts        # Marketplace validation logic
 │   └── storage.ts          # Data persistence (Blob + JSON)
 ├── schemas/
@@ -142,9 +163,9 @@ lib/
 └── types.ts                # Updated with metadata fields
 
 app/api/crawl/
-└── route.ts                # Main crawler endpoint
+└── route.ts                # Main crawler endpoint (GET & POST)
 
-vercel.json                 # Cron configuration
+vercel.json                 # Cron configuration (daily at midnight UTC)
 ```
 
 ## Validation Rules
@@ -157,6 +178,16 @@ The crawler validates:
    - Each plugin must have: `id`, `name`, `source`
 3. **Repository Access**: Repo is publicly accessible on GitHub
 4. **Plugin Fields**: All plugins have required fields
+
+## GitHub Stars Integration
+
+The crawler automatically fetches GitHub star counts for all validated marketplaces:
+
+- **Batch Processing**: Uses `batchFetchStars()` to fetch stars for multiple repos concurrently
+- **Graceful Failures**: Individual star fetch failures don't block the entire crawl process
+- **Timestamp Tracking**: Records when stars were last fetched via `starsFetchedAt`
+- **Incremental Updates**: Updates existing marketplace star counts on each crawl
+- **Popularity Metric**: Star counts help users identify popular and well-maintained plugins
 
 ## Metadata Tracking
 
@@ -171,6 +202,8 @@ Each discovered marketplace includes:
   discoveredAt?: string;  // ISO timestamp of first discovery
   lastUpdated?: string;   // ISO timestamp of last check
   source?: 'manual' | 'auto';  // Discovery source
+  stars?: number;         // GitHub star count
+  starsFetchedAt?: string;  // ISO timestamp of last stars fetch
 }
 ```
 
@@ -179,7 +212,7 @@ Each discovered marketplace includes:
 - **GitHub Code Search API**: 30 requests/minute
 - **GitHub REST API**: 5,000 requests/hour (authenticated)
 
-The crawler is designed to stay well under these limits with hourly runs.
+The crawler is designed to stay well under these limits with daily runs. The batch star fetching uses `Promise.allSettled` to handle failures gracefully without blocking the entire crawl.
 
 ## Troubleshooting
 
@@ -210,6 +243,8 @@ GITHUB_TOKEN=dummy bun run build
 - [ ] Search functionality for discovered marketplaces
 - [ ] Admin dashboard for manual approval
 - [ ] Webhook notifications for new discoveries
-- [ ] Plugin health scoring
+- [x] Basic popularity tracking via GitHub stars
+- [ ] Advanced plugin health scoring (last commit, issues, etc.)
 - [ ] Duplicate marketplace detection
 - [ ] Incremental crawling (only check updated repos)
+- [ ] Star trend tracking (growth over time)
