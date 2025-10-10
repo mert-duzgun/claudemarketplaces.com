@@ -46,6 +46,21 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/favicon/site.webmanifest",
+  openGraph: {
+    title: "Claude Code Marketplaces - Discover Plugin Collections",
+    description:
+      "Discover Claude Code plugin marketplaces. Browse curated collections of extensions for development, productivity, testing, and more.",
+    url: "https://claudemarketplaces.com",
+    siteName: "Claude Code Marketplaces",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Claude Code Marketplaces - Discover Plugin Collections",
+    description:
+      "Discover Claude Code plugin marketplaces. Browse curated collections of extensions for development, productivity, testing, and more.",
+  },
 };
 
 export default function RootLayout({
