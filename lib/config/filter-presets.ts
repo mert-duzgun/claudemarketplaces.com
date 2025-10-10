@@ -18,14 +18,18 @@ export interface FilterPresetConfig {
 
 /**
  * Check if a marketplace was recently published
- * A marketplace is recently published when it was just discovered (discoveredAt === lastUpdated)
+ * A marketplace is recently published when it was discovered within the last 24 hours
  */
 export function isRecentlyPublished(marketplace: Marketplace): boolean {
-  return Boolean(
-    marketplace.discoveredAt &&
-      marketplace.lastUpdated &&
-      marketplace.discoveredAt === marketplace.lastUpdated
-  );
+  if (!marketplace.discoveredAt) {
+    return false;
+  }
+
+  const discoveredDate = new Date(marketplace.discoveredAt);
+  const now = new Date();
+  const twentyFourHoursAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);
+
+  return discoveredDate >= twentyFourHoursAgo;
 }
 
 /**
@@ -42,7 +46,7 @@ export const FILTER_PRESETS: FilterPresetConfig[] = [
   {
     id: "recently-published",
     label: "Recently published",
-    description: "Show newly discovered marketplaces from the last crawl",
+    description: "Show marketplaces discovered in the last 24 hours",
     predicate: isRecentlyPublished,
   },
 ];
