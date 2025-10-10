@@ -1,29 +1,29 @@
 [
   {
     "repo": "EveryInc/every-marketplace",
-    "description": "Official Every-Env plugin marketplace for Claude Code extensions",
+    "description": "Official Every plugin marketplace for Claude Code extensions",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
-    "stars": 108,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "stars": 116,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "davila7/claude-code-templates",
-    "description": "CLI tool for configuring and monitoring Claude Code",
+    "description": "Ready-to-use Claude Code templates organized by workflow",
     "pluginCount": 10,
     "categories": [
       "community"
     ],
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
-    "stars": 6951,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "stars": 6970,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "wshobson/agents",
-    "description": "A collection of production-ready subagents for Claude Code",
+    "description": "Production-ready workflow orchestration system with 83 specialized agents, 15 multi-agent workflows, and 42 development tools",
     "pluginCount": 27,
     "categories": [
       "essentials",
@@ -42,9 +42,9 @@
       "gaming",
       "accessibility"
     ],
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
-    "stars": 15568,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
+    "stars": 15606,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "anthropics/claude-code",
@@ -56,27 +56,27 @@
       "security"
     ],
     "discoveredAt": "2025-10-10T18:03:09.622Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
-    "stars": 36109,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "stars": 36146,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "ruvnet/claude-flow",
-    "description": "🌊 The leading agent orchestration platform for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Features    enterprise-grade architecture, distributed swarm intelligence, RAG integration, and native Claude Code support via MCP protocol. Ranked #1 in agent-based frameworks.",
+    "description": "Enterprise AI agent orchestration marketplace for Claude Code",
     "pluginCount": 1,
     "categories": [
       "development"
     ],
     "discoveredAt": "2025-10-10T18:03:09.974Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
-    "stars": 8802,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "stars": 8805,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "cexll/myclaude",
-    "description": "Cladue Code AI Team Workflow Sub Agents",
+    "description": "Professional multi-agent development workflows with Requirements-Driven and BMAD methodologies, featuring 16+ specialized agents and 12+ commands",
     "pluginCount": 4,
     "categories": [
       "workflows",
@@ -84,10 +84,10 @@
       "advanced"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 755,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "feiskyer/claude-code-settings",
@@ -97,10 +97,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.780Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
-    "stars": 529,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "stars": 530,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "Melvynx/aiblueprint",
@@ -110,10 +110,10 @@
       "essentials"
     ],
     "discoveredAt": "2025-10-10T18:03:09.496Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 8,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "TokenRollAI/cc-plugin",
@@ -123,10 +123,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.523Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "avxkim/personal-marketplace",
@@ -136,10 +136,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.905Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "bengous/claude-code-plugins",
@@ -149,10 +149,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.871Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "siraken/claude-plugins",
@@ -162,10 +162,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.800Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "leobrival/blog-kit",
@@ -182,16 +182,16 @@
   },
   {
     "repo": "danielscholl/claude-sdlc",
-    "description": "Software Development Lifecycle tooling for Claude Code",
+    "description": "Official Every plugin marketplace for Claude Code extensions",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.825Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "johnclyde/clydehub",
@@ -201,14 +201,14 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:10.247Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "henkisdabro/claudecode-marketplace",
-    "description": "",
+    "description": "A comprehensive collection of Claude Code plugins including development utilities, planning tools, agents, hooks, and MCP server configurations",
     "pluginCount": 29,
     "categories": [
       "commands",
@@ -217,10 +217,10 @@
       "mcpservers"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "tmc/it2",
@@ -243,49 +243,49 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.760Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "TelecomsXChangeAPi/destinations-api-claude-plugin",
-    "description": "",
+    "description": "Official marketplace for Destinations API - Global telecommunications database with MCC/MNC codes, E.164/E.212 mapping, and carrier billing data",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.974Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 1,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "eli0shin/cli-lsp-client",
-    "description": "CLI tool for getting LSP diagnostics via background daemon",
+    "description": "Claude Code plugins for CLI LSP Client integration",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.813Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 15,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "sjungling/claude-plugins",
-    "description": "personal collection of Claude Code plugins",
+    "description": "Personal collection of Claude Code plugins",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "cashwu/Claude-Code-Plugin",
@@ -295,10 +295,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.989Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "ShunsukeHayashi/Miyabi",
@@ -323,10 +323,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.508Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "eabay/claude-code-plugins",
@@ -336,23 +336,23 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.853Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "edmundmiller/dotfiles",
-    "description": "For keeping all my Dotfiles update to date",
+    "description": "Version control workflow plugins for Jujutsu and Git",
     "pluginCount": 2,
     "categories": [
       "version-control"
     ],
     "discoveredAt": "2025-10-10T18:03:09.800Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 39,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "atxtechbro/dotfiles",
@@ -362,10 +362,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.871Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 5,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "stepankuzmin/claude-code-plugins",
@@ -375,14 +375,14 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.495Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "ananddtyagi/claude-code-marketplace",
-    "description": "Marketplace repo for Claude Code Plugins",
+    "description": "Community-driven marketplace for Claude Code commands and plugins",
     "pluginCount": 113,
     "categories": [
       "documentation",
@@ -398,10 +398,10 @@
       "agents"
     ],
     "discoveredAt": "2025-10-10T18:03:09.874Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
-    "stars": 35,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "stars": 45,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "LAURA-agent/Claude-to-Speech",
@@ -411,23 +411,23 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.853Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "lpasqualis/lpclaude",
-    "description": "Agents and Commands for Claude Code. ",
+    "description": "Production-ready Claude Code plugin featuring 30+ slash commands for Git automation, documentation generation, job queues, and code quality. Includes 6 specialized agents for security review, completion verification, and documentation auditing. Battle-tested workflows for software engineering teams.",
     "pluginCount": 1,
     "categories": [
       "productivity"
     ],
     "discoveredAt": "2025-10-10T18:03:09.853Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 6,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "JeongJaeSoon/claude-code-marketplace",
@@ -437,23 +437,23 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.811Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "shaurgon/claude-meow-marketplace",
-    "description": "Marketplace for Claude Code plugins",
+    "description": "Curated collection of productivity plugins for Claude Code: context management, task tracking, and workflow automation",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.799Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "thkt/claude-config",
@@ -483,10 +483,10 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T18:03:09.512Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "blogic-cz/blogic-marketplace",
@@ -496,23 +496,23 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.973Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 1,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "hmps/claude-marketplace",
-    "description": "",
+    "description": "Official hmps plugin marketplace for Claude Code extensions",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.859Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "WarrenZhu050413/Warren-Claude-Code-Plugin-Marketplace",
@@ -522,10 +522,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.799Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "jeremylongshore/plugins-Claude-code",
@@ -535,10 +535,10 @@
       "community"
     ],
     "discoveredAt": "2025-10-10T18:03:09.508Z",
-    "lastUpdated": "2025-10-10T19:02:57.657Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "MartinGonzalez/claude-plugins",
@@ -548,23 +548,23 @@
       "productivity"
     ],
     "discoveredAt": "2025-10-10T18:03:09.508Z",
-    "lastUpdated": "2025-10-10T19:02:57.658Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "exa-labs/exa-mcp-server",
-    "description": "Exa MCP for web search and web crawling!",
+    "description": "Official Exa AI plugin providing web search, code search, company research, and deep research capabilities",
     "pluginCount": 1,
     "categories": [
       "productivity"
     ],
     "discoveredAt": "2025-10-10T19:02:56.993Z",
-    "lastUpdated": "2025-10-10T19:02:56.993Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
-    "stars": 2874,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "stars": 2876,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "1broseidon/marketplace",
@@ -574,23 +574,23 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T19:02:56.941Z",
-    "lastUpdated": "2025-10-10T19:02:56.941Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "quant-sentiment-ai/claude-equity-research",
-    "description": "🔌 Claude Code Plugin for institutional-grade equity research.   Install with /plugin marketplace add. Generates professional   buy/sell recommendations with comprehensive fundamental   analysis, technical indicators, and risk assessment. Educational    use only - not financial advice.",
+    "description": "Claude Code plugins for professional equity research and financial analysis",
     "pluginCount": 1,
     "categories": [
       "community"
     ],
     "discoveredAt": "2025-10-10T19:02:56.793Z",
-    "lastUpdated": "2025-10-10T19:02:56.793Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 4,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "FradSer/dotclaude",
@@ -601,10 +601,10 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T19:02:56.470Z",
-    "lastUpdated": "2025-10-10T19:02:56.471Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
-    "stars": 163,
-    "starsFetchedAt": "2025-10-10T19:02:57.655Z"
+    "stars": 164,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   },
   {
     "repo": "Parslee-ai/neo",
@@ -629,9 +629,104 @@
       "development"
     ],
     "discoveredAt": "2025-10-10T19:02:56.540Z",
-    "lastUpdated": "2025-10-10T19:02:56.540Z",
+    "lastUpdated": "2025-10-10T23:04:39.065Z",
     "source": "auto",
     "stars": 0,
-    "starsFetchedAt": "2025-10-10T19:02:57.656Z"
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+  },
+  {
+    "repo": "amitpatole/claude-genkit-plugin",
+    "description": "Firebase Genkit plugins for Claude Code",
+    "pluginCount": 34,
+    "categories": [
+      "development",
+      "productivity",
+      "security",
+      "media",
+      "content"
+    ],
+    "discoveredAt": "2025-10-10T23:04:37.846Z",
+    "lastUpdated": "2025-10-10T23:04:37.846Z",
+    "source": "auto",
+    "stars": 1,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+  },
+  {
+    "repo": "MartyBonacci/specswarm",
+    "description": "Specification-driven development orchestration plugins for Claude Code",
+    "pluginCount": 1,
+    "categories": [
+      "community"
+    ],
+    "discoveredAt": "2025-10-10T23:04:37.821Z",
+    "lastUpdated": "2025-10-10T23:04:37.821Z",
+    "source": "auto",
+    "stars": 1,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+  },
+  {
+    "repo": "DustyWalker/claude-code-marketplace",
+    "description": "Claude Code plugin marketplace featuring production-ready agents based on comprehensive market research",
+    "pluginCount": 1,
+    "categories": [
+      "community"
+    ],
+    "discoveredAt": "2025-10-10T23:04:37.853Z",
+    "lastUpdated": "2025-10-10T23:04:37.853Z",
+    "source": "auto",
+    "stars": 2,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+  },
+  {
+    "repo": "Parslee-ai/claude-code-plugins",
+    "description": "A marketplace of useful claude code plugins",
+    "pluginCount": 1,
+    "categories": [
+      "community"
+    ],
+    "discoveredAt": "2025-10-10T23:04:38.193Z",
+    "lastUpdated": "2025-10-10T23:04:38.193Z",
+    "source": "auto",
+    "stars": 0,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+  },
+  {
+    "repo": "obra/superpowers-marketplace",
+    "description": "Curated Claude Code plugins: skills, workflows, and productivity tools",
+    "pluginCount": 1,
+    "categories": [
+      "productivity"
+    ],
+    "discoveredAt": "2025-10-10T23:04:37.857Z",
+    "lastUpdated": "2025-10-10T23:04:37.857Z",
+    "source": "auto",
+    "stars": 0,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+  },
+  {
+    "repo": "hnegishi/cc-prtools",
+    "description": "Plugin for Claude Code that provides a collection of useful slash commands for managing pull requests",
+    "pluginCount": 1,
+    "categories": [
+      "community"
+    ],
+    "discoveredAt": "2025-10-10T23:04:38.225Z",
+    "lastUpdated": "2025-10-10T23:04:38.225Z",
+    "source": "auto",
+    "stars": 0,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
+  },
+  {
+    "repo": "nazymko/claude-code-marketplace",
+    "description": "A curated collection of Claude Code plugins including agents, commands, and integrations for enhanced development workflows",
+    "pluginCount": 1,
+    "categories": [
+      "career tools"
+    ],
+    "discoveredAt": "2025-10-10T23:04:37.828Z",
+    "lastUpdated": "2025-10-10T23:04:37.828Z",
+    "source": "auto",
+    "stars": 0,
+    "starsFetchedAt": "2025-10-10T23:04:39.064Z"
   }
 ]
