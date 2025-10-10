@@ -21,4 +21,7 @@ export interface Marketplace {
   description: string;
   pluginCount: number;
   categories: string[];
+  discoveredAt?: string;
+  lastUpdated?: string;
+  source?: 'manual' | 'auto';
 }

@@ -3,7 +3,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Marketplace } from "@/lib/types";
-import { Github, Package, ExternalLink, Copy, Check } from "lucide-react";
+import { Package, ExternalLink, Copy, Check } from "lucide-react";
 import { useState } from "react";
 
 interface MarketplaceCardProps {
