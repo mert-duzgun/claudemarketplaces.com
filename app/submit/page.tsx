@@ -1,6 +1,12 @@
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, GitFork, GitPullRequest, FileEdit } from "lucide-react";
 
@@ -13,11 +19,10 @@ export default function SubmitPage() {
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           {/* Hero */}
           <div className="mb-12 text-center">
-            <h1 className="text-4xl font-bold mb-4">
-              Submit Your Marketplace
-            </h1>
+            <h1 className="text-4xl font-bold mb-4">Submit Your Marketplace</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Share your plugin marketplace with the community. Follow these steps to add your marketplace to the directory.
+              Share your plugin marketplace with the community. Follow these
+              steps to add your marketplace to the directory.
             </p>
           </div>
 
@@ -32,7 +37,8 @@ export default function SubmitPage() {
                   <div>
                     <CardTitle>Fork the Repository</CardTitle>
                     <CardDescription>
-                      Create your own copy of the mert-duzgun/claudemarketplaces.com repository
+                      Create your own copy of the
+                      mert-duzgun/claudemarketplaces.com repository
                     </CardDescription>
                   </div>
                 </div>
@@ -70,7 +76,11 @@ export default function SubmitPage() {
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-sm text-muted-foreground">
-                    Add your marketplace entry to <code className="bg-muted px-2 py-1 rounded">lib/data/marketplaces.json</code>:
+                    Add your marketplace entry to{" "}
+                    <code className="bg-muted px-2 py-1 rounded">
+                      lib/data/marketplaces.json
+                    </code>
+                    :
                   </p>
                   <pre className="bg-muted p-4 rounded-lg overflow-x-auto text-sm">
                     <code>{`{
@@ -80,7 +90,11 @@ export default function SubmitPage() {
   "categories": ["development", "productivity"]
 }`}</code>
                   </pre>
-                  <Button variant="outline" asChild className="w-full sm:w-auto">
+                  <Button
+                    variant="outline"
+                    asChild
+                    className="w-full sm:w-auto"
+                  >
                     <a
                       href="https://github.com/mert-duzgun/claudemarketplaces.com/edit/main/lib/data/marketplaces.json"
                       target="_blank"
@@ -113,7 +127,8 @@ export default function SubmitPage() {
               <CardContent>
                 <div className="space-y-4">
                   <p className="text-sm text-muted-foreground">
-                    Once you&apos;ve added your marketplace, create a pull request with a clear title and description.
+                    Once you&apos;ve added your marketplace, create a pull
+                    request with a clear title and description.
                   </p>
                   <Button asChild className="w-full sm:w-auto">
                     <a
@@ -137,7 +152,8 @@ export default function SubmitPage() {
             <CardHeader>
               <CardTitle>Marketplace Requirements</CardTitle>
               <CardDescription>
-                Make sure your marketplace meets these criteria before submitting
+                Make sure your marketplace meets these criteria before
+                submitting
               </CardDescription>
             </CardHeader>
             <CardContent>

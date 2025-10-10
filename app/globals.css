@@ -48,72 +48,72 @@
 :root {
   --radius: 0.625rem;
   /* Claude Brand Colors - Light Mode */
-  --background: #FDFDF7; /* Pale cream */
-  --foreground: #0E0E0E; /* Dark charcoal */
-  --card: #FFFFFF;
-  --card-foreground: #0E0E0E;
-  --popover: #FFFFFF;
-  --popover-foreground: #0E0E0E;
-  --primary: #D4A27F; /* Claude amber/orange */
-  --primary-foreground: #0E0E0E;
-  --secondary: #F5F5F0;
-  --secondary-foreground: #0E0E0E;
-  --muted: #F5F5F0;
-  --muted-foreground: #6B6B6B;
-  --accent: #D4A27F;
-  --accent-foreground: #0E0E0E;
-  --destructive: #DC2626;
-  --border: #E5E5E0;
-  --input: #E5E5E0;
-  --ring: #D4A27F;
-  --chart-1: #D4A27F;
-  --chart-2: #B8956F;
-  --chart-3: #9C8860;
-  --chart-4: #807B51;
-  --chart-5: #646E42;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #0E0E0E;
-  --sidebar-primary: #D4A27F;
-  --sidebar-primary-foreground: #0E0E0E;
-  --sidebar-accent: #F5F5F0;
-  --sidebar-accent-foreground: #0E0E0E;
-  --sidebar-border: #E5E5E0;
-  --sidebar-ring: #D4A27F;
+  --background: #fdfdf7; /* Pale cream */
+  --foreground: #0e0e0e; /* Dark charcoal */
+  --card: #ffffff;
+  --card-foreground: #0e0e0e;
+  --popover: #ffffff;
+  --popover-foreground: #0e0e0e;
+  --primary: hsl(12.79, 80.33%, 65.39%); /* Claude amber/orange */
+  --primary-foreground: #0e0e0e;
+  --secondary: #f5f5f0;
+  --secondary-foreground: #0e0e0e;
+  --muted: #f5f5f0;
+  --muted-foreground: #6b6b6b;
+  --accent: hsl(12.79, 70.33%, 65.39%);
+  --accent-foreground: #0e0e0e;
+  --destructive: #dc2626;
+  --border: #e5e5e0;
+  --input: #e5e5e0;
+  --ring: hsl(12.79, 70.33%, 65.39%);
+  --chart-1: hsl(12.79, 70.33%, 65.39%);
+  --chart-2: #b8956f;
+  --chart-3: #9c8860;
+  --chart-4: #807b51;
+  --chart-5: #646e42;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0e0e0e;
+  --sidebar-primary: hsl(12.79, 70.33%, 65.39%);
+  --sidebar-primary-foreground: #0e0e0e;
+  --sidebar-accent: #f5f5f0;
+  --sidebar-accent-foreground: #0e0e0e;
+  --sidebar-border: #e5e5e0;
+  --sidebar-ring: hsl(12.79, 70.33%, 65.39%);
 }
 
 .dark {
   /* Claude Brand Colors - Dark Mode */
-  --background: #09090B; /* Almost black */
-  --foreground: #FAFAFA; /* Off-white */
-  --card: #18181B;
-  --card-foreground: #FAFAFA;
-  --popover: #18181B;
-  --popover-foreground: #FAFAFA;
-  --primary: #D4A27F; /* Claude amber/orange */
-  --primary-foreground: #0E0E0E;
-  --secondary: #27272A;
-  --secondary-foreground: #FAFAFA;
-  --muted: #27272A;
-  --muted-foreground: #A1A1AA;
-  --accent: #D4A27F;
-  --accent-foreground: #0E0E0E;
-  --destructive: #EF4444;
+  --background: #09090b; /* Almost black */
+  --foreground: #fafafa; /* Off-white */
+  --card: #18181b;
+  --card-foreground: #fafafa;
+  --popover: #18181b;
+  --popover-foreground: #fafafa;
+  --primary: hsl(12.79, 70.33%, 65.39%); /* Claude amber/orange */
+  --primary-foreground: #0e0e0e;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: hsl(12.79, 70.33%, 65.39%);
+  --accent-foreground: #0e0e0e;
+  --destructive: #ef4444;
   --border: rgba(255, 255, 255, 0.1);
   --input: rgba(255, 255, 255, 0.1);
-  --ring: #D4A27F;
-  --chart-1: #D4A27F;
-  --chart-2: #B8956F;
-  --chart-3: #9C8860;
-  --chart-4: #807B51;
-  --chart-5: #646E42;
-  --sidebar: #18181B;
-  --sidebar-foreground: #FAFAFA;
-  --sidebar-primary: #D4A27F;
-  --sidebar-primary-foreground: #0E0E0E;
-  --sidebar-accent: #27272A;
-  --sidebar-accent-foreground: #FAFAFA;
+  --ring: hsl(12.79, 70.33%, 65.39%);
+  --chart-1: hsl(12.79, 70.33%, 65.39%);
+  --chart-2: #b8956f;
+  --chart-3: #9c8860;
+  --chart-4: #807b51;
+  --chart-5: #646e42;
+  --sidebar: #18181b;
+  --sidebar-foreground: #fafafa;
+  --sidebar-primary: hsl(12.79, 70.33%, 65.39%);
+  --sidebar-primary-foreground: #0e0e0e;
+  --sidebar-accent: #27272a;
+  --sidebar-accent-foreground: #fafafa;
   --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #D4A27F;
+  --sidebar-ring: hsl(12.79, 70.33%, 65.39%);
 }
 
 @layer base {
@@ -123,7 +123,12 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif;
   }
 }

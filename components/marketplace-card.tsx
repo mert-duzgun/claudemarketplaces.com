@@ -34,8 +34,7 @@ export function MarketplaceCard({ marketplace }: MarketplaceCardProps) {
         <CardHeader>
           <div className="flex items-start justify-between gap-2">
             <div className="flex items-center gap-2">
-              <Github className="h-5 w-5 text-muted-foreground" />
-              <CardTitle className="text-2xl font-serif">{marketplace.repo}</CardTitle>
+              <CardTitle className="text-xl font-serif">{marketplace.repo}</CardTitle>
             </div>
             <div className="flex items-center gap-2 shrink-0">
               <div className="flex items-center gap-1 text-muted-foreground">
