@@ -38,6 +38,7 @@ export default async function Image() {
             color: "#ee7e60",
             marginBottom: "40px",
             textAlign: "center",
+            fontFamily: "var(--font-bbh-sans)",
           }}
         >
           CLAUDE CODE MARKETPLACES
