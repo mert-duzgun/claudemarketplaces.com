@@ -15,12 +15,26 @@
     "repo": "davila7/claude-code-templates",
     "description": "Community-driven collection of templates and workflows for Next.js, Supabase, testing, security, AI/ML, DevOps, and documentation",
     "pluginCount": 8,
-    "categories": ["development", "testing", "security", "devops", "ai-ml", "documentation", "community"]
+    "categories": [
+      "development",
+      "testing",
+      "security",
+      "devops",
+      "ai-ml",
+      "documentation",
+      "community"
+    ]
   },
   {
     "repo": "wshobson/agents",
     "description": "Production-ready workflow orchestration system with 83 specialized agents, 15 multi-agent workflows, and 42 development tools",
     "pluginCount": 83,
-    "categories": ["development", "productivity", "workflows", "automation", "community"]
+    "categories": [
+      "development",
+      "productivity",
+      "workflows",
+      "automation",
+      "community"
+    ]
   }
 ]
