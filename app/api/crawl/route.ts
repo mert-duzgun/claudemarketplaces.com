@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import {
   searchMarketplaceFiles,
   fetchMarketplaceFile,
@@ -100,6 +101,15 @@ export async function GET(request: NextRequest) {
     console.log(
       `Crawl complete: ${mergeResult.added} added, ${mergeResult.updated} updated, ${mergeResult.removed} removed`
     );
+
+    // Step 6: Revalidate the home page to show updated content immediately
+    try {
+      revalidatePath('/', 'page');
+      console.log("Successfully revalidated home page");
+    } catch (error) {
+      console.error("Failed to revalidate home page:", error);
+      // Don't fail the entire crawl if revalidation fails
+    }
 
     // Return summary
     return NextResponse.json({

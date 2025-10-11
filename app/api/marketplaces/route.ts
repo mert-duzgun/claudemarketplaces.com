@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { readMarketplaces } from "@/lib/crawler/storage";
 
 export const dynamic = "force-dynamic";
-export const revalidate = 3600; // Revalidate every hour
+export const revalidate = 300; // Revalidate every 5 minutes
 
 /**
  * GET /api/marketplaces
@@ -14,7 +14,7 @@ export async function GET() {
 
     return NextResponse.json(marketplaces, {
       headers: {
-        "Cache-Control": "public, s-maxage=3600, stale-while-revalidate=86400",
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=600",
       },
     });
   } catch (error) {
